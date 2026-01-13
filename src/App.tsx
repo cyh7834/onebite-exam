@@ -21,6 +21,19 @@ function App() {
       <div className="m-5 h-50 w-50 bg-red-400 p-5">
         <div className="h-full w-full bg-sky-500"></div>
       </div>
+
+      {/*5. 테두리*/}
+      <div className="m-5 border-x-2 border-r-3 border-red-500"></div>
+
+      {/*6. 플렉스 컨테이너 (배치)*/}
+      <div className="flex">
+        <div className="w-10 border">1</div>
+        <div className="w-10 border">2</div>
+        <div className="w-10 border">3</div>
+        <div className="w-10 border">4</div>
+      </div>
+
+      {/*7. */}
     </div>
   );
 }
