@@ -1,6 +1,10 @@
 import "./App.css";
+import { Button } from "@/components/ui/button"
+import { cn } from "./lib/utils";
 
 function App() {
+  const isActive = true;
+
   return (
     <div>
       {/*1. 타이포그래프*/}
@@ -33,7 +37,11 @@ function App() {
         <div className="w-10 border">4</div>
       </div>
 
-      {/*7. */}
+      <Button>버튼</Button>
+      <div className="text-primary">Primary</div>
+      <div className="text-muted">Muted</div>
+      <div className="text-destructive">Destructive</div>
+      <div className={cn(isActive ? "text-green-500" : "text-red-500")}>isActive</div>
     </div>
   );
 }
