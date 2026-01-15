@@ -1,6 +1,10 @@
 import "./App.css";
 import { Button } from "@/components/ui/button"
+import { Input } from "./components/ui/input";
+import { Textarea } from "./components/ui/textarea";
+
 import { cn } from "./lib/utils";
+import { toast, Toaster } from "sonner";
 
 function App() {
   const isActive = true;
@@ -42,6 +46,18 @@ function App() {
       <div className="text-muted">Muted</div>
       <div className="text-destructive">Destructive</div>
       <div className={cn(isActive ? "text-green-500" : "text-red-500")}>isActive</div>
+
+      <Button variant={"destructive"}>버튼</Button>
+      <Button variant={"ghost"}>버튼</Button>
+      <Button variant={"link"}>버튼</Button>
+      <Button variant={"outline"}>버튼</Button>
+      <Button variant={"secondary"}>버튼</Button>
+      <Input></Input>
+      <Textarea></Textarea>
+      <Toaster></Toaster>
+      <Button onClick={() => {
+        toast("test", {position: "top-center"});
+      }}>Sonner</Button>
     </div>
   );
 }
